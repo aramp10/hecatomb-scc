@@ -58,7 +58,7 @@ Took about 15 minutes; 6.6 GB. Always run Hecatomb from this same folder afterwa
 
 ## 4. Run the test dataset (batch job)
 
-Edit the `cd` line in [`examples/hecatomb_test.qsub`](examples/hecatomb_test.qsub) to your working folder, then:
+Copy [`examples/hecatomb_test.qsub`](examples/hecatomb_test.qsub) to your working folder, edit its `cd` line to that folder, then:
 
 ```bash
 cd /projectnb/vervmb/your-folder
@@ -75,7 +75,7 @@ Test results on the SCC (28 cores):
 | | |
 |---|---|
 | Run time | 1h50m |
-| Peak memory | 39 GB |
+| Peak memory | about 40 GB |
 | Output | `hecatomb.out/`, 8.9 GB |
 
 The test ends with `Hecatomb finished successfully!` in the job log (`hecatomb_test.<jobid>.log`).
