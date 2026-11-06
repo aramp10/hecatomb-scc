@@ -13,6 +13,17 @@ Steps 2 and 3 download files from the internet, so run them in an SCC OnDemand D
 
 ## 1. Install Hecatomb
 
+First time using conda on the SCC? Set up your `.condarc` first, following [Miniconda Modules](https://www.bu.edu/tech/support/research/software-and-programming/common-languages/python/python-software/miniconda-modules/#Conda%20Modules):
+
+```bash
+module load miniconda
+setup_scc_condarc.sh
+```
+
+**Warning:** without a properly set up `.condarc`, conda stores environments in your SCC home directory (10 GB quota), which a few environments can easily fill.
+
+Then install Hecatomb:
+
 ```bash
 module load miniconda
 conda create -n hecatomb python=3.11
