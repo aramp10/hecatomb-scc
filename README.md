@@ -4,12 +4,10 @@ Steps used to install [Hecatomb](https://github.com/shandley/hecatomb) (viral me
 
 ## Summary
 
-| Step | Who | Where | Approx. time |
-|---|---|---|---|
-| 1. Install Hecatomb in a conda environment | each user | any SCC session | a few minutes |
-| 2. Download the databases (~52 GB) | once per project | SCC OnDemand Desktop | ~15 min |
-| 3. Prepare the software Hecatomb uses during a run | each user, once per working folder | SCC OnDemand Desktop | ~15 min |
-| 4. Run the test dataset | each user | batch job | ~1.5–2 hours |
+1. Install Hecatomb in a conda environment: a few minutes
+2. Download the databases (~52 GB): about 15 minutes
+3. Prepare the software Hecatomb uses during a run: about 15 minutes
+4. Run the test dataset as a batch job: about 1.5–2 hours
 
 Steps 2 and 3 download files from the internet, so run them in an SCC OnDemand Desktop session, not in a batch job.
 
