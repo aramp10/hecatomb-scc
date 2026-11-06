@@ -1,0 +1,32 @@
+#!/bin/bash -l
+
+#$ -P vervmb
+#$ -N hecatomb_test
+#$ -pe omp 28
+# MEGAHIT (used by Hecatomb) needs a node with AVX2 CPU instructions
+#$ -l avx2
+#$ -j y
+#$ -o hecatomb_test.$JOB_ID.log
+
+# Run the Hecatomb test dataset.
+# Submit from your working folder:
+#   qsub hecatomb_test.qsub
+
+module load miniconda
+conda activate hecatomb
+
+# Shared database folder (downloaded once with: hecatomb install)
+export HECATOMB_DB=/projectnb/vervmb/hecatomb_databases
+
+# Your working folder: the one where you ran "hecatomb test build_envs"
+# (edit "your-folder"; the job stops here if the folder does not exist)
+cd /projectnb/vervmb/your-folder || exit 1
+
+echo "Start: $(date)  Host: $(hostname)"
+hecatomb --version
+
+hecatomb test --threads $NSLOTS
+status=$?
+
+echo "Exit code: $status  End: $(date)"
+exit $status
