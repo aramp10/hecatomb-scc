@@ -58,10 +58,16 @@ Took about 15 minutes; 6.6 GB. Always run Hecatomb from this same folder afterwa
 
 ## 4. Run the test dataset (batch job)
 
-Copy [`examples/hecatomb_test.qsub`](examples/hecatomb_test.qsub) to your working folder, edit its `cd` line to that folder, then:
+Download the job script [`examples/hecatomb_test.qsub`](examples/hecatomb_test.qsub) into your working folder:
 
 ```bash
 cd /projectnb/vervmb/your-folder
+wget https://raw.githubusercontent.com/aramp10/hecatomb-scc/main/examples/hecatomb_test.qsub
+```
+
+Edit its `cd` line to your working folder, then submit it:
+
+```bash
 qsub hecatomb_test.qsub
 ```
 
