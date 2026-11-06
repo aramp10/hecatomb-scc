@@ -88,5 +88,10 @@ The test ends with `Hecatomb finished successfully!` in the job log (`hecatomb_t
 | Conda environment | < 1 GB | each user |
 | Hecatomb's tools | 6.6 GB | `.snakemake/conda` in the working folder |
 | Test output | 8.9 GB | `hecatomb.out/` in the working folder |
+| **Total** | **about 68 GB** | |
 
-Check your project's space with `pquota vervmb`.
+Before starting, make sure your SCC project has enough free space (quota minus usage):
+
+```bash
+pquota vervmb
+```
